@@ -8,7 +8,7 @@ public class Area {
         System.out.print("Please enter the radius of a circle: ");
         double radius = scanner.nextDouble();
         scanner.close();
-
+////
         double pi = 3.14159;
         double area = pi * radius * radius;
         System.out.println("The area of the circle is: " + area);
