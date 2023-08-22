@@ -1,5 +1,5 @@
+package org.launchcode;
 import org.launchcode.Circle;
-
 import java.util.Scanner;
 
 public class Area {
