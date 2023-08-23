@@ -1,5 +1,5 @@
 package studio;
-
+import java.util.Map;
 import java.util.HashMap;
 
 public class CountingCharacters {
@@ -10,10 +10,15 @@ public class CountingCharacters {
 
         inputString =inputString.toLowerCase();
 
-        for (char c: inputString.toCharArray()) {
+        for (var c: inputString.toCharArray()) {
             if (!Character.isAlphabetic(c)) {
                 continue;
             }
+
+            characterCounts.put(c, characterCounts.getOrDefault(c, 0) + 1);
+        }
+        for (Map.Entry<Character, Integer> entry : characterCounts.entrySet()) {
+            System.out.println("'" + entry.getKey() + "' occurs " + entry.getValue() + " times");
+        }
         }
     }
-}
